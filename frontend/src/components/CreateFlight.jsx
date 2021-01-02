@@ -5,8 +5,8 @@ class CreateFlight extends Component {
   constructor(props) {
     super();
     this.state = {
-      flightId: 0,
-      fuelCapacity: 0,
+      flightId: undefined,
+      fuelCapacity: undefined,
       route: "",
       origin: "",
       destination: "",
@@ -78,6 +78,7 @@ class CreateFlight extends Component {
               className="form-control"
               value={this.state.flightId}
               onChange={this.onChangeFlightId}
+              placeholder="Enter Flight Number"
             />
           </div>
           <div className="form-group">
@@ -87,6 +88,7 @@ class CreateFlight extends Component {
               className="form-control"
               value={this.state.fuelCapacity}
               onChange={this.onChangeFuelCapacity}
+              placeholder="Enter Fuel Capacity in Litres"
             />
           </div>
           <div className="form-group">
@@ -96,6 +98,7 @@ class CreateFlight extends Component {
               className="form-control"
               value={this.state.route}
               onChange={this.onChangeRoute}
+              placeholder="Enter the Route"
             />
           </div>
           <div className="form-group">
@@ -105,6 +108,7 @@ class CreateFlight extends Component {
               className="form-control"
               value={this.state.origin}
               onChange={this.onChangeOrigin}
+              placeholder="Enter Origin"
             />
           </div>
           <div className="form-group">
@@ -114,6 +118,7 @@ class CreateFlight extends Component {
               className="form-control"
               value={this.state.destination}
               onChange={this.onChangeDestination}
+              placeholder="Enter Destination"
             />
           </div>
           <div className="form-group">
@@ -123,6 +128,7 @@ class CreateFlight extends Component {
               className="form-control"
               value={this.state.duration}
               onChange={this.onChangeDuration}
+              placeholder="Enter the travel Duration"
             />
           </div>
           <div className="form-group">
@@ -132,6 +138,7 @@ class CreateFlight extends Component {
               className="form-control"
               value={this.state.time}
               onChange={this.onChangeTime}
+              placeholder="Enter the Flight Departure time"
             />
           </div>
 

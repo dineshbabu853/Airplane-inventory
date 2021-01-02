@@ -18,7 +18,6 @@ const Flight = (props) => (
           Edit
         </Link>
       </button>{" "}
-      |{" "}
       <button
         className="btn btn-danger"
         onClick={() => {
@@ -52,7 +51,7 @@ class FlightsList extends Component {
 
   deleteFlight(id) {
     axios
-      .delete("http://localhost:5000/flight/" + id)
+      .delete("http://localhost:5000/flights/" + id)
       .then((res) => console.log(res.data));
 
     this.setState({
