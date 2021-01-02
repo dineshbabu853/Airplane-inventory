@@ -1,6 +1,8 @@
 ## [Airplane Inventory of Deccan Air using MERN stack](https://deccan-airs.herokuapp.com/)         
  
-> This a sample Ariplane inverntory for Flights      
+> This a sample Ariplane inverntory for Flights     
+
+App is live at [here](https://deccan-airs.herokuapp.com/)    
 
 Supports basic CRUD operations like   
 
