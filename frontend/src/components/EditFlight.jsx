@@ -25,7 +25,10 @@ class EditFlight extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/flights/" + this.props.match.params.id)
+      .get(
+        "https://airplane-backend.herokuapp.com/flights/" +
+          this.props.match.params.id
+      )
       .then((res) => {
         this.setState({
           flightId: res.data.flightId,
@@ -63,7 +66,7 @@ class EditFlight extends Component {
   onChangeTime(e) {
     this.setState({ time: e.target.value });
   }
-  onSubmit(e) {
+  async onSubmit(e) {
     e.preventDefault();
     const flight = {
       flightId: this.state.flightId,
@@ -77,9 +80,10 @@ class EditFlight extends Component {
 
     console.log(flight);
 
-    axios
+    await axios
       .post(
-        "http://localhost:5000/flights/update/" + this.props.match.params.id,
+        "https://airplane-backend.herokuapp.com/flights/update/" +
+          this.props.match.params.id,
         flight
       )
       .then((res) => console.log(res.data));

@@ -44,7 +44,7 @@ class CreateFlight extends Component {
   onChangeTime(e) {
     this.setState({ time: e.target.value });
   }
-  onSubmit(e) {
+  async onSubmit(e) {
     e.preventDefault();
     const flight = {
       flightId: this.state.flightId,
@@ -58,8 +58,8 @@ class CreateFlight extends Component {
 
     console.log(flight);
 
-    axios
-      .post("http://localhost:5000/flights/add", flight)
+    await axios
+      .post("https://airplane-backend.herokuapp.com/flights/add", flight)
       .then((res) => console.log(res.data));
 
     window.location = "/";
@@ -82,7 +82,7 @@ class CreateFlight extends Component {
             />
           </div>
           <div className="form-group">
-            <label>FuelCapacity: </label>
+            <label>Fuel Capacity: </label>
             <input
               type="text"
               className="form-control"

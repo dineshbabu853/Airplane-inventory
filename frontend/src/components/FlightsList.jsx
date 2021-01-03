@@ -42,7 +42,7 @@ class FlightsList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/flights/")
+      .get("https://airplane-backend.herokuapp.com/flights/")
       .then((res) => {
         this.setState({ flights: res.data });
       })
@@ -51,7 +51,7 @@ class FlightsList extends Component {
 
   deleteFlight(id) {
     axios
-      .delete("http://localhost:5000/flights/" + id)
+      .delete("https://airplane-backend.herokuapp.com/flights/" + id)
       .then((res) => console.log(res.data));
 
     this.setState({
